@@ -13,7 +13,7 @@ export default function Calculator() {
   function change() {}
   function equal() {
     try {
-      setResult(eval(result).toString());
+      setResult(result.toString());
     } catch (err) {
       setResult("Error");
     }
