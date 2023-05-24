@@ -10,6 +10,7 @@ export default function Calculator() {
     setResult(result.slice(0, result.length - 1));
   }
 
+  function change() {}
   function equal() {
     try {
       setResult(eval(result).toString());
@@ -36,7 +37,12 @@ export default function Calculator() {
       <div className="calculator">
         <div className="top">
           <form>
-            <input type="text" placeholder="0" value={result} />
+            <input
+              type="text"
+              placeholder="0"
+              onChange={change}
+              value={result}
+            />
           </form>
         </div>
 
